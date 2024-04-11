@@ -14,6 +14,10 @@ def goback():
     main_page()
 
 
+class Порядковый_номер:
+    pass
+
+
 def leaderboard():
     global leaderboard_screen
     leaderboard_screen = Tk()
@@ -56,7 +60,7 @@ def leaderboard():
         score.pop(x)
         h.pop(x)
         Имя = stats[0]
-        Поряковый_Номер = stats[1]
+        Номер = stats[1]
         Счёт = stats[2]
         Label(leaderboard_screen, text=Имя, font=("arial 11")).grid(column=0, row=rownum)
         Label(leaderboard_screen, text=Порядковый_номер, font=("arial 11")).grid(column=1, row=rownum)
@@ -74,7 +78,7 @@ def showresults():
     global results_screen
     ques10_screen.destroy()
     results_screen = Tk()
-    results_screen.geometry = "200x200"
+    results_screen.geometry = "300x300"
     results_screen.resizable(False, False)
     results_screen.title("RESULTS")
 
@@ -256,7 +260,7 @@ def ques1():
     global ques1_screen
     detailscreen.destroy()
     ques1_screen = Tk()
-    ques1_screen.geometry("500x500")
+    ques1_screen.geometry("600x600")
     ques1_screen.title("Вопрос 1")
     ques1_screen.resizable(False, False)
 
@@ -290,7 +294,7 @@ def ques2():
     global ques2_screen
     ques1_screen.destroy()
     ques2_screen = Tk()
-    ques2_screen.geometry("500x500")
+    ques2_screen.geometry("600x600")
     ques2_screen.title("Вопрос 2")
     ques2_screen.resizable(False, False)
 
@@ -301,19 +305,19 @@ def ques2():
 
     Label(ques2_screen, text="Вопрос 2", font="10", bg="black", fg="white", width="50", height="3").pack()
     Label(ques2_screen, text="").pack()
-    Label(ques2_screen, text=" Replace the ? \n"
-                             "15, 15, 30, 10, 40, ?, 48", font="7").pack()
+    Label(ques2_screen, text=" Какое число лишнее? \n"
+                             "1, 3, 5, 6", font="7").pack()
     Label(ques2_screen, text="").pack()
-    Radiobutton(ques2_screen, text='8', value=1, padx="80", font=("arial", 15, "italic"),
+    Radiobutton(ques2_screen, text='6', value=1, padx="80", font=("arial", 15, "italic"),
                 command=lambda: M.append(150)).pack(anchor=W)
     Label(ques2_screen, text="").pack()
-    Radiobutton(ques2_screen, text='20', value=2, padx="80", font=("arial", 15, "italic"),
+    Radiobutton(ques2_screen, text='3', value=2, padx="80", font=("arial", 15, "italic"),
                 command=lambda: M.append(0)).pack(anchor=W)
     Label(ques2_screen, text="").pack()
-    Radiobutton(ques2_screen, text='24', value=3, padx="80", font=("arial", 15, "italic"),
+    Radiobutton(ques2_screen, text='5', value=3, padx="80", font=("arial", 15, "italic"),
                 command=lambda: M.append(0)).pack(anchor=W)
     Label(ques2_screen, text="").pack()
-    Radiobutton(ques2_screen, text='40', value=4, padx="80", font=("arial", 15, "italic"),
+    Radiobutton(ques2_screen, text='1', value=4, padx="80", font=("arial", 15, "italic"),
                 command=lambda: M.append(0)).pack(anchor=W)
     Button(ques2_screen, text="Далее", font="1", fg="white", bg="black", command=second_assign).pack()
     Label(ques2_screen, text="").pack()
@@ -323,26 +327,26 @@ def ques3():
     global ques3_screen
     ques2_screen.destroy()
     ques3_screen = Tk()
-    ques3_screen.geometry("500x500")
+    ques3_screen.geometry("600x600")
     ques3_screen.title("Вопрос 3")
     ques3_screen.resizable(False, False)
 
-    Label(ques3_screen, text="QUESTION-3", font="10", bg="black", fg="white", width="50", height="3").pack()
+    Label(ques3_screen, text="Вопрос 3", font="10", bg="black", fg="white", width="50", height="3").pack()
     Label(ques3_screen, text="").pack()
-    Label(ques3_screen, text=" Adequate : Enough :: Veracity : ? \n", font="7").pack()
+    Label(ques3_screen, text=" Какие из перечисленных стран расположены в Южной Америке? \n", font="5").pack()
     Label(ques3_screen, text="").pack()
-    Radiobutton(ques3_screen, text='Antagonist', value=1, padx="80", font=("arial", 15, "italic"),
+    Radiobutton(ques3_screen, text='Япония', value=1, padx="80", font=("arial", 15, "italic"),
                 command=lambda: M.append(0)).pack(anchor=W)
     Label(ques3_screen, text="").pack()
-    Radiobutton(ques3_screen, text='Animate', value=2, padx="80", font=("arial", 15, "italic"),
+    Radiobutton(ques3_screen, text='Индия', value=2, padx="80", font=("arial", 15, "italic"),
                 command=lambda: M.append(0)).pack(anchor=W)
     Label(ques3_screen, text="").pack()
-    Radiobutton(ques3_screen, text='Little', value=3, padx="80", font=("arial", 15, "italic"),
+    Radiobutton(ques3_screen, text='Австралия', value=3, padx="80", font=("arial", 15, "italic"),
                 command=lambda: M.append(0)).pack(anchor=W)
     Label(ques3_screen, text="").pack()
-    Radiobutton(ques3_screen, text='Truth', value=4, padx="80", font=("arial", 15, "italic"),
+    Radiobutton(ques3_screen, text='Чили', value=4, padx="80", font=("arial", 15, "italic"),
                 command=lambda: M.append(100)).pack(anchor=W)
-    Button(ques3_screen, text="NEXT", font="1", fg="white", bg="black", command=third_assign).pack()
+    Button(ques3_screen, text="Далее", font="1", fg="white", bg="black", command=third_assign).pack()
     Label(ques3_screen, text="").pack()
 
 
@@ -350,29 +354,26 @@ def ques4():
     global ques4_screen
     ques3_screen.destroy()
     ques4_screen = Tk()
-    ques4_screen.geometry("500x500")
-    ques4_screen.title("QUESTION-4")
+    ques4_screen.geometry("600x600")
+    ques4_screen.title("Вопрос 4")
     ques4_screen.resizable(False, False)
 
-    Label(ques4_screen, text="QUESTION-4", font="10", bg="black", fg="white", width="50", height="3").pack()
+    Label(ques4_screen, text="Вопрос 4", font="10", bg="black", fg="white", width="50", height="3").pack()
     Label(ques4_screen, text="").pack()
-    Label(ques4_screen, text="Statements:  Z>B=S , Y≥B>F , H<S≤Y , Z>S≥T\n"
-                             "Conclusions:\n"
-                             "1. Y>T\n"
-                             "2. Y=T\n", font="7").pack()
+    Label(ques4_screen, text=" Какое число следует в последовательности: 8, 13, 21, 34 \n", font="7").pack()
     Label(ques4_screen, text="").pack()
-    Radiobutton(ques4_screen, text='None of the conclusion follow', value=1, padx="80", font=("arial", 15, "italic"),
+    Radiobutton(ques4_screen, text='89', value=1, padx="80", font=("arial", 15, "italic"),
                 command=lambda: M.append(0)).pack(anchor=W)
     Label(ques4_screen, text="").pack()
-    Radiobutton(ques4_screen, text='Only I follow', value=2, padx="80", font=("arial", 15, "italic"),
+    Radiobutton(ques4_screen, text='44', value=2, padx="80", font=("arial", 15, "italic"),
                 command=lambda: M.append(0)).pack(anchor=W)
     Label(ques4_screen, text="").pack()
-    Radiobutton(ques4_screen, text='Only II follow', value=3, padx="80", font=("arial", 15, "italic"),
+    Radiobutton(ques4_screen, text='61', value=3, padx="80", font=("arial", 15, "italic"),
                 command=lambda: M.append(0)).pack(anchor=W)
     Label(ques4_screen, text="").pack()
-    Radiobutton(ques4_screen, text='Either I or II follow', value=4, padx="80", font=("arial", 15, "italic"),
+    Radiobutton(ques4_screen, text='55', value=4, padx="80", font=("arial", 15, "italic"),
                 command=lambda: M.append(200)).pack(anchor=W)
-    Button(ques4_screen, text="NEXT", font="1", fg="white", bg="black", command=fourth_assign).pack()
+    Button(ques4_screen, text="Далее", font="1", fg="white", bg="black", command=fourth_assign).pack()
     Label(ques4_screen, text="").pack()
 
 
@@ -380,26 +381,26 @@ def ques5():
     global ques5_screen
     ques4_screen.destroy()
     ques5_screen = Tk()
-    ques5_screen.geometry("500x500")
-    ques5_screen.title("QUESTION-5")
+    ques5_screen.geometry("600x600")
+    ques5_screen.title("Вопрос 5")
     ques5_screen.resizable(False, False)
 
-    Label(ques5_screen, text="QUESTION-5", font="10", bg="black", fg="white", width="50", height="3").pack()
+    Label(ques5_screen, text="Вопрос 5", font="10", bg="black", fg="white", width="50", height="3").pack()
     Label(ques5_screen, text="").pack()
-    Label(ques5_screen, text="Complete the given sequence \n 7, 23, 55, 109, __", font="7").pack()
+    Label(ques5_screen, text="Какое из перечисленных утверждений является истинным? \n", font="7").pack()
     Label(ques5_screen, text="").pack()
-    Radiobutton(ques5_screen, text='193', value=1, padx="80", font=("arial", 15, "italic"),
+    Radiobutton(ques5_screen, text='Все лошади - животные', value=1, padx="80", font=("arial", 15, "italic"),
                 command=lambda: M.append(0)).pack(anchor=W)
     Label(ques5_screen, text="").pack()
-    Radiobutton(ques5_screen, text='191', value=2, padx="80", font=("arial", 15, "italic"),
+    Radiobutton(ques5_screen, text='Некоторые лошади - животные', value=2, padx="80", font=("arial", 15, "italic"),
                 command=lambda: M.append(100)).pack(anchor=W)
     Label(ques5_screen, text="").pack()
-    Radiobutton(ques5_screen, text='190', value=3, padx="80", font=("arial", 15, "italic"),
+    Radiobutton(ques5_screen, text='Все животные - лошади', value=3, padx="80", font=("arial", 15, "italic"),
                 command=lambda: M.append(0)).pack(anchor=W)
     Label(ques5_screen, text="").pack()
-    Radiobutton(ques5_screen, text='192', value=4, padx="80", font=("arial", 15, "italic"),
+    Radiobutton(ques5_screen, text='Никто из лошадей не является животным', value=4, padx="80", font=("arial", 15, "italic"),
                 command=lambda: M.append(0)).pack(anchor=W)
-    Button(ques5_screen, text="NEXT", font="1", fg="white", bg="black", command=fifth_assign).pack()
+    Button(ques5_screen, text="Далее", font="1", fg="white", bg="black", command=fifth_assign).pack()
     Label(ques5_screen, text="").pack()
 
 
@@ -407,29 +408,27 @@ def ques6():
     global ques6_screen
     ques5_screen.destroy()
     ques6_screen = Tk()
-    ques6_screen.geometry("500x500")
-    ques6_screen.title("QUESTION-6")
+    ques6_screen.geometry("900x500")
+    ques6_screen.title("Вопрос 6")
     ques6_screen.resizable(False, False)
 
-    Label(ques6_screen, text="QUESTION-6", font="10", bg="black", fg="white", width="50", height="3").pack()
+    Label(ques6_screen, text="Вопрос 6", font="10", bg="black", fg="white", width="50", height="3").pack()
     Label(ques6_screen, text="").pack()
-    Label(ques6_screen, text="Pointing to a photograph, a lady tells Pramod "
-                             '"I am the\nonly daughter of this lady and her son is your maternal\nuncle".'
-                             "How is the speaker related to pramod's father? \n", font="7").pack()
+    Label(ques6_screen, text="Если в слове ПАРАДОКС переставить буквы местами, какое слово получится? \n", font="7").pack()
     Label(ques6_screen, text="").pack()
-    Radiobutton(ques6_screen, text='Sister-in-law', value=1, padx="80", font=("arial", 15, "italic"),
+    Radiobutton(ques6_screen, text='РАСПОДАК', value=1, padx="80", font=("arial", 15, "italic"),
                 command=lambda: M.append(0)).pack(anchor=W)
     Label(ques6_screen, text="").pack()
-    Radiobutton(ques6_screen, text='Wife', value=2, padx="80", font=("arial", 15, "italic"),
+    Radiobutton(ques6_screen, text='КРОДПААС', value=2, padx="80", font=("arial", 15, "italic"),
                 command=lambda: M.append(150)).pack(anchor=W)
     Label(ques6_screen, text="").pack()
-    Radiobutton(ques6_screen, text='Neice', value=3, padx="80", font=("arial", 15, "italic"),
+    Radiobutton(ques6_screen, text='СКРАДПАО', value=3, padx="80", font=("arial", 15, "italic"),
                 command=lambda: M.append(0)).pack(anchor=W)
     Label(ques6_screen, text="").pack()
-    Radiobutton(ques6_screen, text='None', value=4, padx="80", font=("arial", 15, "italic"),
+    Radiobutton(ques6_screen, text='КОДПРАСА', value=4, padx="80", font=("arial", 15, "italic"),
                 command=lambda: M.append(0)).pack(anchor=W)
     Label(ques6_screen, text="").pack()
-    Button(ques6_screen, text="NEXT", font="1", fg="white", bg="black", command=sixth_assign).pack()
+    Button(ques6_screen, text="Далее", font="1", fg="white", bg="black", command=sixth_assign).pack()
     Label(ques6_screen, text="").pack()
 
 
@@ -437,28 +436,27 @@ def ques7():
     global ques7_screen
     ques6_screen.destroy()
     ques7_screen = Tk()
-    ques7_screen.geometry("500x500")
-    ques7_screen.title("QUESTION-7")
+    ques7_screen.geometry("600x600")
+    ques7_screen.title("Вопрос 7")
     ques7_screen.resizable(False, False)
 
-    Label(ques7_screen, text="QUESTION-7", font="10", bg="black", fg="white", width="50", height="3").pack()
+    Label(ques7_screen, text="Вопрос 7", font="10", bg="black", fg="white", width="50", height="3").pack()
     Label(ques7_screen, text="").pack()
-    Label(ques7_screen, text="Find the missing term in the series \n"
-                             "1,5,19,?,211,665", font="7").pack()
+    Label(ques7_screen, text="Какое из перечисленных животных не относится к кошачьим? \n", font="7").pack()
     Label(ques7_screen, text="").pack()
-    Radiobutton(ques7_screen, text='102', value=1, padx="80", font=("arial", 15, "italic"),
+    Radiobutton(ques7_screen, text='Леопард', value=1, padx="80", font=("arial", 15, "italic"),
                 command=lambda: M.append(0)).pack(anchor=W)
     Label(ques7_screen, text="").pack()
-    Radiobutton(ques7_screen, text='197', value=2, padx="80", font=("arial", 15, "italic"),
+    Radiobutton(ques7_screen, text='Тигр', value=2, padx="80", font=("arial", 15, "italic"),
                 command=lambda: M.append(0)).pack(anchor=W)
     Label(ques7_screen, text="").pack()
-    Radiobutton(ques7_screen, text='113', value=3, padx="80", font=("arial", 15, "italic"),
+    Radiobutton(ques7_screen, text='Пума', value=3, padx="80", font=("arial", 15, "italic"),
                 command=lambda: M.append(0)).pack(anchor=W)
     Label(ques7_screen, text="").pack()
-    Radiobutton(ques7_screen, text='65', value=4, padx="80", font=("arial", 15, "italic"),
+    Radiobutton(ques7_screen, text='Лев', value=4, padx="80", font=("arial", 15, "italic"),
                 command=lambda: M.append(200)).pack(anchor=W)
     Label(ques7_screen, text="").pack()
-    Button(ques7_screen, text="NEXT", font="1", fg="white", bg="black", command=seventh_assign).pack()
+    Button(ques7_screen, text="Далее", font="1", fg="white", bg="black", command=seventh_assign).pack()
     Label(ques7_screen, text="").pack()
 
 
@@ -466,28 +464,27 @@ def ques8():
     global ques8_screen
     ques7_screen.destroy()
     ques8_screen = Tk()
-    ques8_screen.geometry("500x500")
-    ques8_screen.title("QUESTION-8")
+    ques8_screen.geometry("700x600")
+    ques8_screen.title("Вопрос 8")
     ques8_screen.resizable(False, False)
 
-    Label(ques8_screen, text="QUESTION-8", font="10", bg="black", fg="white", width="50", height="3").pack()
+    Label(ques8_screen, text="Вопрос 8", font="10", bg="black", fg="white", width="50", height="3").pack()
     Label(ques8_screen, text="").pack()
-    Label(ques8_screen, text="Find the missing term in the series \n"
-                             "18,36,54,72,?,108", font="7").pack()
+    Label(ques8_screen, text="Какое животное из списка обладает наименьшим количеством ног \n", font="7").pack()
     Label(ques8_screen, text="").pack()
-    Radiobutton(ques8_screen, text='90', value=1, padx="80", font=("arial", 15, "italic"),
+    Radiobutton(ques8_screen, text='Паук', value=1, padx="80", font=("arial", 15, "italic"),
+                command=lambda: M.append(0)).pack(anchor=W)
+    Label(ques8_screen, text="").pack()
+    Radiobutton(ques8_screen, text='Скорпион', value=2, padx="80", font=("arial", 15, "italic"),
+                command=lambda: M.append(0)).pack(anchor=W)
+    Label(ques8_screen, text="").pack()
+    Radiobutton(ques8_screen, text='Эму', value=3, padx="80", font=("arial", 15, "italic"),
                 command=lambda: M.append(50)).pack(anchor=W)
     Label(ques8_screen, text="").pack()
-    Radiobutton(ques8_screen, text='84', value=2, padx="80", font=("arial", 15, "italic"),
+    Radiobutton(ques8_screen, text='Слон', value=4, padx="80", font=("arial", 15, "italic"),
                 command=lambda: M.append(0)).pack(anchor=W)
     Label(ques8_screen, text="").pack()
-    Radiobutton(ques8_screen, text='91', value=3, padx="80", font=("arial", 15, "italic"),
-                command=lambda: M.append(0)).pack(anchor=W)
-    Label(ques8_screen, text="").pack()
-    Radiobutton(ques8_screen, text='97', value=4, padx="80", font=("arial", 15, "italic"),
-                command=lambda: M.append(0)).pack(anchor=W)
-    Label(ques8_screen, text="").pack()
-    Button(ques8_screen, text="NEXT", font="1", fg="white", bg="black", command=eighth_assign).pack()
+    Button(ques8_screen, text="Далее", font="1", fg="white", bg="black", command=eighth_assign).pack()
     Label(ques8_screen, text="").pack()
 
 
@@ -495,28 +492,27 @@ def ques9():
     global ques9_screen
     ques8_screen.destroy()
     ques9_screen = Tk()
-    ques9_screen.geometry("500x500")
-    ques9_screen.title("QUESTION-9")
+    ques9_screen.geometry("700x600")
+    ques9_screen.title("Вопрос 9")
     ques9_screen.resizable(False, False)
 
-    Label(ques9_screen, text="QUESTION-9", font="10", bg="black", fg="white", width="50", height="3").pack()
+    Label(ques9_screen, text="Вопрос 9", font="10", bg="black", fg="white", width="50", height="3").pack()
     Label(ques9_screen, text="").pack()
-    Label(ques9_screen, text="Find the missing term in the series \n"
-                             "0,?,26,255,3124,", font="7").pack()
+    Label(ques9_screen, text="Какое из перечисленных слов не соответсвует остальным по смыслу? \n", font="7").pack()
     Label(ques9_screen, text="").pack()
-    Radiobutton(ques9_screen, text='3', value=1, padx="80", font=("arial", 15, "italic"),
+    Radiobutton(ques9_screen, text='Лимон', value=1, padx="80", font=("arial", 15, "italic"),
                 command=lambda: M.append(200)).pack(anchor=W)
     Label(ques9_screen, text="").pack()
-    Radiobutton(ques9_screen, text='17', value=2, padx="80", font=("arial", 15, "italic"),
+    Radiobutton(ques9_screen, text='Апельсин', value=2, padx="80", font=("arial", 15, "italic"),
                 command=lambda: M.append(0)).pack(anchor=W)
     Label(ques9_screen, text="").pack()
-    Radiobutton(ques9_screen, text='22', value=3, padx="80", font=("arial", 15, "italic"),
+    Radiobutton(ques9_screen, text='Банан', value=3, padx="80", font=("arial", 15, "italic"),
                 command=lambda: M.append(0)).pack(anchor=W)
     Label(ques9_screen, text="").pack()
-    Radiobutton(ques9_screen, text='9', value=4, padx="80", font=("arial", 15, "italic"),
+    Radiobutton(ques9_screen, text='Яблоко', value=4, padx="80", font=("arial", 15, "italic"),
                 command=lambda: M.append(0)).pack(anchor=W)
     Label(ques9_screen, text="").pack()
-    Button(ques9_screen, text="NEXT", font="1", fg="white", bg="black", command=ninth_assign).pack()
+    Button(ques9_screen, text="Далее", font="1", fg="white", bg="black", command=ninth_assign).pack()
     Label(ques9_screen, text="").pack()
 
 
@@ -524,28 +520,27 @@ def ques10():
     global ques10_screen
     ques9_screen.destroy()
     ques10_screen = Tk()
-    ques10_screen.geometry("500x500")
-    ques10_screen.title("QUESTION-10")
+    ques10_screen.geometry("800x800")
+    ques10_screen.title("Вопрос 10")
     ques10_screen.resizable(False, False)
 
-    Label(ques10_screen, text="QUESTION-10", font="10", bg="black", fg="white", width="50", height="3").pack()
+    Label(ques10_screen, text="Вопрос 10", font="10", bg="black", fg="white", width="50", height="3").pack()
     Label(ques10_screen, text="").pack()
-    Label(ques10_screen, text=" If PIYUSH is ZYIKCX\n"
-                              "THEN WHAT IS SAKTH LAUNDE", font="7").pack()
+    Label(ques10_screen, text=" Если в 3:00 назовут 300 курантов, сколько курантов осведомят вас о времени в 6:45?? \n", font="7").pack()
     Label(ques10_screen, text="").pack()
-    Radiobutton(ques10_screen, text='CQUIR VQEDNU', value=1, padx="80", font=("arial", 15, "italic"),
+    Radiobutton(ques10_screen, text='600', value=1, padx="80", font=("arial", 15, "italic"),
                 command=lambda: M.append(250)).pack(anchor=W)
     Label(ques10_screen, text="").pack()
-    Radiobutton(ques10_screen, text='CQTJX VQISTR', value=2, padx="80", font=("arial", 15, "italic"),
+    Radiobutton(ques10_screen, text='675', value=2, padx="80", font=("arial", 15, "italic"),
                 command=lambda: M.append(0)).pack(anchor=W)
     Label(ques10_screen, text="").pack()
-    Radiobutton(ques10_screen, text='CWUMS JWYUAR', value=3, padx="80", font=("arial", 15, "italic"),
+    Radiobutton(ques10_screen, text='700', value=3, padx="80", font=("arial", 15, "italic"),
                 command=lambda: M.append(0)).pack(anchor=W)
     Label(ques10_screen, text="").pack()
-    Radiobutton(ques10_screen, text='CWGIO JWLAUR', value=4, padx="80", font=("arial", 15, "italic"),
+    Radiobutton(ques10_screen, text='750', value=4, padx="80", font=("arial", 15, "italic"),
                 command=lambda: M.append(0)).pack(anchor=W)
     Label(ques10_screen, text="").pack()
-    Button(ques10_screen, text="SUBMIT", font="1", fg="white", bg="black", command=tenth_assign).pack()
+    Button(ques10_screen, text="Отправить", font="1", fg="white", bg="black", command=tenth_assign).pack()
     Label(ques10_screen, text="").pack()
 
 
@@ -554,20 +549,20 @@ def details():
     loginscreen.destroy()
     detailscreen = Tk()
     detailscreen.geometry = "500x500"
-    detailscreen.title("RULES")
+    detailscreen.title("Правила")
     detailscreen.resizable(False, False)
 
-    Label(detailscreen, text="RULES", font="10", bg="black", fg="white", width="50", height="3").pack()
+    Label(detailscreen, text="Правила", font="10", bg="black", fg="white", width="50", height="3").pack()
     Label(detailscreen, text="").pack()
-    Label(detailscreen, text="Now you will be solving 10 Questions \n "
-                             "in the TIME-SPAN of 10 minutes \n", font="7").pack()
+    Label(detailscreen, text="Теперь вам предстоит ответить на 10 вопросов \n "
+                             "в течении 10 минут \n", font="7").pack()
     Label(detailscreen, text="").pack()
-    Label(detailscreen, text="*Each Question is compulsory\n\n"
-                             "*If you move on the next question you can not come back", fg="red").pack()
+    Label(detailscreen, text="*Каждый вопрос является обязательным\n\n"
+                             "*Если вы перейдёте к следующему вопросу, вы не сможете вернуться", fg="red").pack()
     Label(detailscreen, text="").pack()
-    Label(detailscreen, text="ALL THE BEST!!", font="7", fg="blue").pack()
+    Label(detailscreen, text="Всего наилучшего!", font="7", fg="blue").pack()
     Label(detailscreen, text="").pack()
-    Button(detailscreen, text="BEGIN ==>", font="1", fg="white", bg="black", command=ques1).pack()
+    Button(detailscreen, text="Начать", font="1", fg="white", bg="black", command=ques1).pack()
     Label(detailscreen, text="").pack()
 
 
@@ -602,7 +597,7 @@ def login_page():
     global loginscreen
     loginscreen = Tk()
     loginscreen.geometry = "500x500"
-    loginscreen.title("Login")
+    loginscreen.title("Авторизация")
     loginscreen.resizable(False, False)
 
     global username
@@ -610,17 +605,17 @@ def login_page():
     username = StringVar()
     entrynum = StringVar()
 
-    Label(loginscreen, text="LOGIN", font="10", bg="black", fg="white", width="40", height="3").pack()
+    Label(loginscreen, text="Авторизация", font="10", bg="black", fg="white", width="40", height="3").pack()
 
     Label(loginscreen, text="").pack()
-    Label(loginscreen, text="Name", font="7").pack()
+    Label(loginscreen, text="Имя", font="7").pack()
     Entry(loginscreen, font="2", textvariable=username, width=26).pack()
     Label(loginscreen, text="").pack()
-    Label(loginscreen, text="Entry Number", font="7").pack()
+    Label(loginscreen, text="Порядковый номер", font="7").pack()
     Entry(loginscreen, font="2", textvariable=entrynum, width=26).pack()
     Label(loginscreen, text="").pack()
 
-    Button(loginscreen, text="NEXT!!!", font="5", bg="grey", fg="black", command=check_validity_username).pack()
+    Button(loginscreen, text="Далее", font="5", bg="grey", fg="black", command=check_validity_username).pack()
     Label(loginscreen, text="").pack()
 
 
@@ -631,15 +626,15 @@ def main_page():
     mainscreen.title("IQ TEST")
     mainscreen.resizable(False, False)
 
-    Label(mainscreen, text="Welcome To The IQ TEST", font="1", bg="black", fg="white", width="50", height="3").pack()
+    Label(mainscreen, text="Добро Пожаловать на IQ TEST", font="1", bg="black", fg="white", width="50", height="3").pack()
 
     Label(mainscreen, text="").pack()
-    Label(mainscreen, text="THIS IS AN IQ TEST WHICH CONSISTS OF 10 QUESTIONS",
+    Label(mainscreen, text="Тест состоит из 10 вопросов",
           font="3").pack()
 
     Label(mainscreen, text="").pack()
     Label(mainscreen, text="").pack()
-    Button(mainscreen, text="START!", font="5", bg="grey", fg="black", command=mainpage_to_loginpage).pack()
+    Button(mainscreen, text="НАЧАТЬ", font="5", bg="grey", fg="black", command=mainpage_to_loginpage).pack()
     Label(mainscreen, text="").pack()
     mainscreen.mainloop()
 
